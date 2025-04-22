@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Link, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
@@ -28,7 +28,15 @@ const App = () => {
   const [aToken, setAToken] = useState(localStorage.getItem("aToken") ? localStorage.getItem("aToken") : "");
 
   return (
-    <div className="app">
+    <div className="app relative">
+      {/* Start Add Seller Dashboard */}
+      <div className="fixed top-[15%] z-[9999] bg-black rounded-tr-md rounded-br-md w-fit p-1 flex justify-center items-center">
+        <Link to={"https://food-grocery-frontend.vercel.app/seller"}
+          className="text-sm text-gray-50 text-center"
+        >Admin <br />Dashboard</Link>
+      </div>
+      {/* End Add Seller Dashboard */}
+
       <ToastContainer position="top-center" theme="light" />
       {/* SignIn */}
       {showSignIn ? <Login /> : null}
