@@ -11,7 +11,7 @@ import { ToastContainer } from 'react-toastify';
 import Footer from "./components/Footer";
 import { useContext, useState } from "react";
 import { AppContext } from "./context/AppContext";
-import Login from "./pages/LogIn";
+import Login from "./pages/Login";
 import AddAddress from "./pages/AddAddress";
 import Profile from "./pages/Profile";
 import MyOrders from "./pages/MyOrders";
