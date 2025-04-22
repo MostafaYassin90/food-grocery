@@ -44,7 +44,7 @@ const placeOrder = async (req, res) => {
 const orderPaymentOnline = async (req, res) => {
 
   try {
-    const frontEnd_url = "http://localhost:5173";
+    const frontEnd_url = "https://food-grocery-frontend.vercel.app";
 
     const { items, address, amount, paymentType } = await req.body;
     const userId = await req.user;
